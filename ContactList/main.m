@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Contact.h"
+#import "ContactList.h"
+#import "InputCollector.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
