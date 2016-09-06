@@ -10,13 +10,14 @@
 
 @implementation InputCollector
 
--(NSString *)inputForPrompt:(NSString *)promptString
++(NSString *)inputForPrompt:(NSString *)promptString
 {
     char inputChars[255];
     NSLog(@"%@", promptString);
     fgets(inputChars,255,stdin);
     
-    return [NSString stringWithUTF8String:inputChars];
+    //Converts chars to String and trims the excess whitespace and new lines
+    return [[NSString stringWithUTF8String:inputChars] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 
 }
 

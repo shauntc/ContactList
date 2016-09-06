@@ -10,7 +10,7 @@
 
 @interface InputCollector : NSObject
 
--(NSString *)inputForPrompt:(NSString *)promptString;
++(NSString *)inputForPrompt:(NSString *)promptString;
 
 
 @end

@@ -7,8 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "InputCollector.h"
 
 @interface Contact : NSObject
+@property (nonatomic, strong)NSString *name;
+@property (nonatomic, strong)NSString *email;
+
+-(NSString *)description;
+
+-(instancetype)initWithName:(NSString *)name andEmail:(NSString *)email;
+-(instancetype)initWithName:(NSString *)name;
+-(instancetype)initWithUserInput;
+
 
 
 @end
