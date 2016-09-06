@@ -10,4 +10,5 @@
 
 @interface Contact : NSObject
 
+
 @end

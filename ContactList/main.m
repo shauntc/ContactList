@@ -13,8 +13,16 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+    
+    InputCollector *inputCollector = [[InputCollector alloc] init];
+    
+    
+    NSString *userSelection = [inputCollector inputForPrompt:@"What would you like do next?\nnew - Create a new contact\nlist - List all contacts\nquit - Exit Application"];
+        
+        NSLog(@"%@", userSelection);
+    
+    
+    
     }
     return 0;
 }

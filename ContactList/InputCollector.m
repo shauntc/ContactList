@@ -10,4 +10,14 @@
 
 @implementation InputCollector
 
+-(NSString *)inputForPrompt:(NSString *)promptString
+{
+    char inputChars[255];
+    NSLog(@"%@", promptString);
+    fgets(inputChars,255,stdin);
+    
+    return [NSString stringWithUTF8String:inputChars];
+
+}
+
 @end
