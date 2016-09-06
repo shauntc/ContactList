@@ -16,6 +16,7 @@
 -(void)addContact:(Contact *) newContact;
 -(void)listContacts;
 -(void)showContactAtIndex:(int) index;
+-(void)findContact:(NSString *) searchTerm;
 
 
 @end

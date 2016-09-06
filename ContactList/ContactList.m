@@ -39,6 +39,23 @@
     NSLog(@"%@", self.contactList[index]);
 }
 
+-(void)findContact:(NSString *) searchTerm
+{
+    bool foundContact = NO;
+    for(Contact *contact in self.contactList)
+    {
+        if([contact.name localizedCaseInsensitiveContainsString:searchTerm] || [contact.email localizedCaseInsensitiveContainsString:searchTerm])
+        {
+            NSLog(@"%@", contact);
+            foundContact = YES;
+        }
+    }
+    if(!foundContact)
+    {
+        NSLog(@"No contacts found with that search term");
+    }
+}
+
 
 
 
